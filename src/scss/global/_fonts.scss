@@ -1,0 +1,17 @@
+/* open-sans-regular - cyrillic */
+@font-face {
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Verdana Regular'), local('Verdana-Regular'),
+    url('../fonts/verdana-regular.ttf') format('truetype');
+}
+
+/* open-sans-700 - cyrillic */
+@font-face {
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Verdana Bold'), local('Verdana-Bold'),
+    url('../fonts/verdana-bold.ttf') format('truetype');
+}

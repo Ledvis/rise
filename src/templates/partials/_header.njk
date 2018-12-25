@@ -1,0 +1,15 @@
+<header class="header">
+  <div class="header__wrapper">
+    {# <img class="header__logo" src="/img/logo@mb.png" alt=""> #}
+
+    {% import "data/data.njk" as data %}
+
+    <ul>
+      {% for item in data.contacts %}
+        <li>
+          <a href="">{{item.telephone}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>

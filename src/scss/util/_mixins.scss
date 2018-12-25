@@ -1,0 +1,212 @@
+@mixin container {
+  width: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include media-min($tablet-width) {
+    width: 768px;
+  }
+
+  @include media-min($desktop-width) {
+    width: 1280px;
+  }
+}
+
+@mixin container-fluid {
+  width: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media #{$tablet-width} {
+    width: 75%;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin element-invisible {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+@mixin element-invisible-off {
+  position: static !important;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  clip-path: none;
+}
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  height: auto;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  &>img,
+  &>video,
+  &>div,
+  &>svg,
+  &>path {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+@mixin button-reset {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::-moz-focus-inner {
+    border: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin media-min($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-max($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin generator($items) {
+
+  @each $item,
+  $value in $items {
+    &:nth-of-type(#{$item}) {
+
+      @each $k,
+      $v in $value {
+        #{$k}: $v;
+      }
+    }
+  }
+}
+
+@mixin pseudo($width, $height, $imgUrl: null) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+
+  @if ($imgUrl) {
+    background: url("~/static/img/#{$imgUrl}");
+    background-size: cover;
+  }
+}
+
+@mixin backgroundImage($items, $url, $type) {
+
+  @each $item,
+  $value in $items {
+    &:nth-of-type(#{$item}) {
+      &::after {
+        @include horizontal-center;
+
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        background-size: cover;
+        background: url('~/static/img/#{$url}#{$item}.#{$type}') no-repeat center;
+      }
+
+      @each $k,
+      $v in $value {
+        &::after {
+          #{$k}: $v;
+        }
+      }
+    }
+  }
+}
+
+@mixin smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin smooth-font {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin gpu {
+  transform: translate3d(0, 0, 0);
+}
+
+@mixin font($alias, $name, $extension, $format, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $alias;
+    src: url('../fonts/#{$name}.#{$extension}') format('#{$format}');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}

@@ -1,0 +1,21 @@
+@import "node_modules/normalize-scss/sass/normalize/import-now";
+
+@include font(Verdana, "verdana-italic", "ttf", "truetype", 400);
+@include font(Verdana, "verdana-italic-bold", "ttf", "truetype", 700);
+@include font(Verdana, "verdana-bold", "ttf", "truetype", 700);
+@include font(Verdana, "verdana-regular", "ttf", "truetype", 400);
+
+body {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 1.2;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+img,
+video,
+audio {
+  max-width: 100%;
+  height: auto;
+}
