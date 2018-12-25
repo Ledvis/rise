@@ -1,0 +1,18 @@
+{% import "data/data.njk" as data %}
+
+<section class="contacts">
+  <div class="contacts__wrapper">
+    <h2 class="contacts__title">
+      Наші контакти:
+    </h2>
+
+    <ul class="contacts__cards">
+      {% for item in data.contacts %}
+        <li class="contacts__card">
+          <a class="contacts__link" href="tel:{{ item.telephone | trim }}">{{ item.telephone }}</a>
+          <a class="text" href="mailto:{{ item.email | trim }}">{{ item.email }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

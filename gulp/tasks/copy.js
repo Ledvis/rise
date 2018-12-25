@@ -38,7 +38,7 @@ gulp.task('copy', [
   'copy:img',
   // 'copy:rootfiles',
   // 'copy:lib',
-  // 'copy:data',
+  'copy:data',
   'copy:fonts'
 ]);
 gulp.task('copy:watch', function() {

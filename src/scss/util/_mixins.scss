@@ -157,7 +157,7 @@
   height: $height;
 
   @if ($imgUrl) {
-    background: url("~/static/img/#{$imgUrl}");
+    background: url("../img/#{$imgUrl}");
     background-size: cover;
   }
 }
@@ -175,7 +175,7 @@
         z-index: -1;
         top: 0;
         background-size: cover;
-        background: url('~/static/img/#{$url}#{$item}.#{$type}') no-repeat center;
+        background: url('../img/#{$url}#{$item}.#{$type}') no-repeat center;
       }
 
       @each $k,
@@ -209,4 +209,10 @@
     font-style: $style;
     font-display: swap;
   }
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

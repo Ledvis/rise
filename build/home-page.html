@@ -12,27 +12,119 @@
   <body>
     <header class="header">
       <div class="header__wrapper">
-        <ul>
-          <li>
-            <a href="">+38 067 248 09 30</a>
-          </li>
-          <li>
-            <a href="">+38 067 502 81 94</a>
-          </li>
-          <li>
-            <a href="">+38 044 393 40 93</a>
-          </li>
-        </ul>
+        <div class="header__container">
+          <img class="header__logo" src="/img/logo.png" alt="">
+          <ul class="header__contacts">
+            <li class="header__contact">
+              <a class="header__link" href="tel:+38 067 248 09 30">+38 067 248 09 30</a>
+            </li>
+            <li class="header__contact">
+              <a class="header__link" href="tel:+38 067 502 81 94">+38 067 502 81 94</a>
+            </li>
+            <li class="header__contact">
+              <a class="header__link" href="tel:+38 044 393 40 93">+38 044 393 40 93</a>
+            </li>
+          </ul>
+        </div>
+        <p class="text">ПАТ «Компанія «РАЙЗ» та ТОВ «Український дистриб’юційний центр», учасники групи компаній аграрного холдингу UkrLandFarming PLC - національні українські дистриб’ютори насіння, засобів захисту рослин, мінеральних та спеціальних добрив, сільськогосподарської техніки та запасних частин проводять реалізацію та розпродаж частини складських залишків за зниженим валютними курсами, надаючи супер дешеву ціну для фермерів та аграрних господарств. </p>
       </div>
     </header>
     <main>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
+      <section class="catalog">
+        <div class="catalog__wrapper">
+          <h2 class="catalog__title">У нас ви можете купити за <strong>супер дешевими цінами:</strong>
+          </h2>
+          <ul class="catalog__cards">
+            <li class="catalog__card  catalog__card--active">
+              <h3 class="catalog__caption">насіння від виробника</h3>
+              <p class="text">кукурудзи, соняшника, сої, ріпаку та інших культур</p>
+              <picture>
+                <source media="(min-width: 1280px)" srcset="/img/brands-1@dt.jpg">
+                <img src="/img/brands-1@mb.jpg" alt="">
+              </picture>
+            </li>
+            <li class="catalog__card-inner">
+              <ul class="catalog__cards-inner">
+                <li class="catalog__card  catalog__card--flag  catalog__card--ua">
+                  <h3 class="catalog__caption">насіння українських селекційних інститутів</h3>
+                </li>
+                <li class="catalog__card  catalog__card--flag  catalog__card--nl">
+                  <h3 class="catalog__caption">голландське насіння </h3>
+                  <p class="text">овочів помідорів, огірків, цибулі, гарбуза, кабачків</p>
+                </li>
+              </ul>
+            </li>
+            <li class="catalog__card  catalog__card--plants">
+              <h3 class="catalog__caption">засоби захисту рослин </h3>
+              <picture>
+                <source media="(min-width: 1280px)" srcset="/img/brands-2@dt.jpg">
+                <img src="/img/brands-2@mb.jpg" alt="">
+              </picture>
+            </li>
+            <li class="catalog__card  catalog__card--minerals">
+              <h3 class="catalog__caption">мінеріальні добрива </h3>
+              <picture>
+                <source media="(min-width: 1280px)" srcset="/img/brands-3@dt.jpg">
+                <img src="/img/brands-3@mb.jpg" alt="">
+              </picture>
+            </li>
+            <li class="catalog__card  catalog__card--micro">
+              <h3 class="catalog__caption">мікродобрива </h3>
+              <picture>
+                <source media="(min-width: 1280px)" srcset="/img/brands-4@dt.jpg">
+                <img src="/img/brands-4@mb.jpg" alt="">
+              </picture>
+            </li>
+            <li class="catalog__card  catalog__card--spare">
+              <h3 class="catalog__caption">запасні частини для <picture>
+                  <source media="(min-width: 1280px)" srcset="/img/brands-6@dt.jpg">
+                  <img src="/img/brands-6@mb.jpg" alt="">
+                </picture>
+              </h3>
+              <picture>
+                <source media="(min-width: 1280px)" srcset="/img/brands-5@dt.jpg">
+                <img src="/img/brands-5@mb.jpg" alt="">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="info">
+        <div class="info__wrapper">
+          <p class="text  text--font-lg">Дистриб’юція нараховує </p>
+          <h1 class="info__title">25 агродилерських центрів по всій Україні, </h1>
+          <p class="text  text--font-lg">що дозволяє надавати комплексну підтримку та послуги для усіх покупців на всеукраїнському рівні. </p>
+          <div class="info__banner">
+            <p class="text">Ознайомитись з переліком реалізації складу по супер дешевим цінам можна за данною ссилкою : </p>
+            <a class="info__link" href="/data/Sale.xls" dowload="dowload">==посилання==</a>
+            <p class="text">*При оптових закупівлях можлива індивідуальна знижка</p>
+          </div>
+          <div class="info__container">
+            <p class="text">Також ми можемо надати хороші ціни на нові гібридні переліки та хімію за цінами першого дистриб'ютора за вашим індивідуальним запитом.</p>
+            <p class="text">Телефонуйте, пишіть, будемо раді допомогти вашому бізнесу.</p>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title"> Наші контакти: </h2>
+          <ul class="contacts__cards">
+            <li class="contacts__card">
+              <a class="contacts__link" href="tel:+38 067 248 09 30">+38 067 248 09 30</a>
+              <a class="text" href="mailto:chornomazv@ulf.com.ua">chornomazv@ulf.com.ua</a>
+            </li>
+            <li class="contacts__card">
+              <a class="contacts__link" href="tel:+38 067 502 81 94">+38 067 502 81 94</a>
+              <a class="text" href="mailto:novikovai@ulf.com.ua">novikovai@ulf.com.ua</a>
+            </li>
+            <li class="contacts__card">
+              <a class="contacts__link" href="tel:+38 044 393 40 93">+38 044 393 40 93</a>
+              <a class="text" href="mailto:secretar@ukrlandfarming.com.ua">secretar@ukrlandfarming.com.ua</a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
-    <footer>
-      <div>footer</div>
-    </footer>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
