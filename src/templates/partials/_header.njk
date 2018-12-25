@@ -1,15 +1,19 @@
 <header class="header">
   <div class="header__wrapper">
-    {# <img class="header__logo" src="/img/logo@mb.png" alt=""> #}
+    <div class="header__container">
+      <img class="header__logo" src="/img/logo.png" alt="">
 
-    {% import "data/data.njk" as data %}
+      {% import "data/data.njk" as data %}
 
-    <ul>
-      {% for item in data.contacts %}
-        <li>
-          <a href="">{{item.telephone}}</a>
-        </li>
-      {% endfor %}
-    </ul>
+      <ul class="header__contacts">
+        {% for item in data.contacts %}
+          <li class="header__contact">
+            <a class="header__link" href="tel:{{ item.telephone | trim }}">{{ item.telephone }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <p class="text">ПАТ «Компанія «РАЙЗ» та ТОВ «Український дистриб’юційний центр», учасники групи компаній аграрного холдингу UkrLandFarming PLC - національні українські дистриб’ютори насіння, засобів захисту рослин, мінеральних та спеціальних добрив, сільськогосподарської техніки та запасних частин проводять реалізацію та розпродаж частини складських залишків за зниженим валютними курсами, надаючи супер дешеву ціну для фермерів та аграрних господарств.
+    </p>
   </div>
 </header>

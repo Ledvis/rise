@@ -1,0 +1,123 @@
+.header {
+  &__wrapper {
+    @include container;
+
+    position: relative;
+    padding: 15px 10px 120px;
+    overflow-x: hidden;
+
+    &::before {
+      @include pseudo(697px, 573px, "header@mb.png");
+
+      z-index: -1;
+      top: -150px;
+      left: 30px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 235px;
+  }
+
+  &__logo {
+    width: 135px;
+    height: 81px;
+  }
+
+  &__contacts {
+    position: relative;
+    margin: 0;
+    padding: 14px 20px;
+    list-style: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: -500px;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 37px;
+    }
+  }
+
+  &__link {
+    @include text-overflow;
+
+    color: rgb(0, 0, 0);
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@include media-min($tablet-width) {
+  .header {
+    &__wrapper {
+      &::before {
+        @include pseudo(697px, 443px);
+
+        top: -126px;
+        right: 0;
+        left: initial;
+      }
+    }
+  }
+}
+
+@include media-min($desktop-width) {
+  .header {
+    &__wrapper {
+      padding: 60px 16px 256px;
+      overflow-x: initial;
+
+      &::before {
+        @include pseudo(1920px, 700px, "header@dt.jpg");
+
+        top: 0;
+        right: -300px;
+        background-position: center;
+      }
+
+      .text {
+        padding-right: 690px;
+      }
+    }
+
+    &__container {
+      align-items: flex-start;
+      margin-bottom: 87px;
+    }
+
+    &__logo {
+      width: 288px;
+      height: 172px;
+    }
+
+    &__contacts {
+      display: flex;
+    }
+
+    &__contact {
+      &:not(:last-of-type) {
+        margin-right: 25px;
+      }
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 19.02px;
+    }
+  }
+}

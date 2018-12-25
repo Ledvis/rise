@@ -1,0 +1,27 @@
+.text {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+
+  &--font-lg {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@include media-min($desktop-width) {
+  .text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+
+    &--font-lg {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+}

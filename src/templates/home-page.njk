@@ -3,9 +3,8 @@
 
 {% block content %}
 
-  {# partial example #}
-
-  {# mixin example #}
-  {{mixins.icon('facebook')}}
+  {% include "partials/_catalog.njk" %}
+  {% include "partials/_info.njk" %}
+  {% include "partials/_contacts.njk" %}
 
 {% endblock %}

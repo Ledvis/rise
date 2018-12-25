@@ -1,0 +1,105 @@
+.info {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    @include pseudo(400px, 100%, "info@mb.jpg");
+
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  &__wrapper {
+    @include container;
+
+    padding: 75px 10px 85px;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 17px 0 22px;
+    color: rgb(149, 193, 31);
+    font-family: Verdana;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  &__banner {
+    margin: 30px 0;
+    padding: 30px 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.53);
+  }
+
+  &__link {
+    display: block;
+    margin: 34px 0 28px;
+    color: rgb(0, 0, 0);
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23.47px;
+    text-decoration: underline;
+  }
+
+  &__container {
+    .text {
+      &:first-of-type {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@include media-min($tablet-width) {
+  .info {
+    &::before {
+      @include pseudo(100%, 100%, "info@dt.jpg");
+    }
+  }
+}
+
+@include media-min($desktop-width) {
+  .info {
+    &__wrapper {
+      padding: 115px 16px 156px;
+    }
+
+    &__title {
+      margin: 18px 0 26px;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+
+    &__banner {
+      width: 751px;
+      margin: 36px auto 48px;
+      padding: 44px 80px 38px;
+      box-sizing: border-box;
+    }
+
+    &__container {
+      width: 602px;
+      margin: 0 auto;
+
+      .text {
+        &:first-of-type {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    &__link {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23.46px;
+    }
+  }
+}
