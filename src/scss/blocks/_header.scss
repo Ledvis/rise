@@ -18,12 +18,15 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 235px;
   }
 
   &__logo {
-    width: 135px;
-    height: 81px;
+    img {
+      width: 124px;
+      height: 20px;
+    }
   }
 
   &__contacts {
@@ -97,12 +100,14 @@
 
     &__container {
       align-items: flex-start;
-      margin-bottom: 87px;
+      margin-bottom: 206px;
     }
 
     &__logo {
-      width: 288px;
-      height: 172px;
+      img {
+        width: 305px;
+        height: 48px;
+      }
     }
 
     &__contacts {
